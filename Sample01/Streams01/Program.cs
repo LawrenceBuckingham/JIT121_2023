@@ -1,0 +1,108 @@
+﻿using static System.Console;
+
+namespace Streams01 {
+    internal class Program {
+        static void Main(string[] args) {
+            Dictionary<string, Action<string[]>> options = new() {
+                ["show-args"] = ShowArgs,
+                ["print-file"] = PrintFile,
+                ["copy-file"] = CopyFile,
+            };
+
+            if (args.Length > 0 && options.ContainsKey(args[0])) {
+                var actionToPerform = options[args[0]];
+                actionToPerform(args);
+            }
+            else {
+                WriteLine("Usage: dotnet run option [... optional additional arguments]");
+                WriteLine($"Valid options are:\n\t{string.Join("\n\t", options.Keys.OrderBy(s => s))}");
+            }
+        }
+
+        private static void CopyFile( string[] args ) {
+            if (args.Length > 2) {
+                var srcName = args[1];
+                var destName = args[2];
+                // var uses automatic type inference to simplify the coding experience 
+
+                if (File.Exists(srcName) && ! File.Exists(destName) ) {
+                    CopyFile(srcName, destName);
+                }
+                else {
+                    WriteLine($"File '{srcName}' cannot be copied to '{destName}'.");
+                }
+            }
+            else {
+                WriteLine("Error: copy-file requires the source file name as a second argument and the destination file name as the third argument.");
+            }
+        }
+
+        private static void CopyFile(string srcName, string destName) {
+            using StreamReader reader = new(srcName);
+            using StreamWriter writer = new(destName);
+
+            while( true ) {
+                string? currentLine = reader.ReadLine();
+
+                if (currentLine == null) break;
+
+                writer.WriteLine(currentLine);
+                // On Windows, this will have the effect of replacing "\n" with "\r\n"
+            }
+        }
+
+        /// <summary>
+        /// Displays the contents of a file as text, with line numbers.
+        /// </summary>
+        /// <param name="args">A list of command line arguments. 
+        /// We expect the file name to be in args[1].
+        /// </param>
+        private static void PrintFile( string[] args ) {
+            if (args.Length > 1) {
+                var fileName = args[1];
+                // var uses automatic type inference to simplify the coding experience 
+
+                if (File.Exists(fileName)) {
+                    DisplayFileContents(fileName);
+                }
+                else {
+                    WriteLine($"File '{fileName}' cannot be displayed.");
+                }
+            }
+            else {
+                WriteLine("Error: print-file requires the file name as a second command line argument.");
+            }
+        }
+
+        private static void DisplayFileContents(string fileName) {
+            using StreamReader reader = new(fileName);
+            // using ... means to ensure that reader.Dispose() will be invoked before the method exits.
+            // reader is a StreamReader, which is in turn a TextReader, which has the ReadLine()  method.
+
+            int lineNumber = 1;
+
+            while (true) {
+                string? currentLine = reader.ReadLine();
+
+                if (currentLine == null) break;
+
+                WriteLine($"{lineNumber:d4}: {currentLine}");
+                lineNumber++;
+            }
+        }
+
+        private static void ShowArgs(string[] args) {
+            // Command line arguments let us send information into our programs when we start them,
+            // without doing Console.ReadLine, Console.WriteLine
+            // We can run the program in batch mode, but other interesting possibilities as well.
+            // 
+            Console.WriteLine($"The program has {args.Length} command line arguments.");
+
+            int i = 0;
+            foreach (var arg in args) {
+                WriteLine($"Argument {i} = '{args[i]}'");
+                i++;
+            }
+        }
+    }
+}

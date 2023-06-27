@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Sample01/.vs
+/Sample01/Array01/bin/Debug/net7.0
+/Sample01/Array01/obj
+/Sample01/Array02/bin/Debug/net7.0
+/Sample01/Array02/obj
+/Sample01/Array03/bin/Debug/net7.0
+/Sample01/Array03/obj
+/Sample01/Array04_ConvertLogicToData/bin/Debug/net7.0
+/Sample01/Array04_ConvertLogicToData/obj
+/Sample01/Array04_MultiDimensionalArray/bin/Debug/net7.0
+/Sample01/Array04_MultiDimensionalArray/obj
+/Sample01/Collections01_List_SentinelControlledInput/bin/Debug/net7.0
+/Sample01/Collections01_List_SentinelControlledInput/obj
+/Sample01/Collections02_Dictionary/bin/Debug/net7.0
+/Sample01/Collections02_Dictionary/obj
+/Sample01/Sample01/bin/Debug/net7.0
+/Sample01/Sample01/obj
+/Sample01/Sample02/bin/Debug/net7.0
+/Sample01/Sample02/obj
+/Sample01/Streams01/bin/Debug/net7.0
+/Sample01/Streams01/obj
+/Sample01/ValidatedInput/bin/Debug/net7.0
+/Sample01/ValidatedInput/obj

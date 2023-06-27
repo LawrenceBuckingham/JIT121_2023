@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Streams01": {
+      "commandName": "Project",
+      "commandLineArgs": "copy-file Program.cs Program-copy.txt",
+      "workingDirectory": "Q:\\JIT121\\Examples\\Session01\\Sample01\\Streams01"
+    }
+  }
+}
