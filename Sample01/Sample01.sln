@@ -15,15 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array02", "Array02\Array02.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array03", "Array03\Array03.csproj", "{396D922C-E0EA-40E1-A086-7C9F22CF07D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array04_MultiDimensionalArray", "Array04_MultiDimensionalArray\Array04_MultiDimensionalArray.csproj", "{FE6B8082-447D-417B-AF39-98BB5372501F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array04_MultiDimensionalArray", "Array04_MultiDimensionalArray\Array04_MultiDimensionalArray.csproj", "{FE6B8082-447D-417B-AF39-98BB5372501F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array05_ConvertLogicToData", "Array04_ConvertLogicToData\Array05_ConvertLogicToData.csproj", "{A2B28BCB-D5AA-45F2-A064-A7A4590F893A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array05_ConvertLogicToData", "Array04_ConvertLogicToData\Array05_ConvertLogicToData.csproj", "{A2B28BCB-D5AA-45F2-A064-A7A4590F893A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections01_List_SentinelControlledInput", "Collections01_List_SentinelControlledInput\Collections01_List_SentinelControlledInput.csproj", "{00380C03-B006-48B9-8D84-A4B6D945AFB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections01_List_SentinelControlledInput", "Collections01_List_SentinelControlledInput\Collections01_List_SentinelControlledInput.csproj", "{00380C03-B006-48B9-8D84-A4B6D945AFB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections02_Dictionary", "Collections02_Dictionary\Collections02_Dictionary.csproj", "{DCA6FA50-F0F8-4FA8-AA74-8BF543C12F08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections02_Dictionary", "Collections02_Dictionary\Collections02_Dictionary.csproj", "{DCA6FA50-F0F8-4FA8-AA74-8BF543C12F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streams01", "Streams01\Streams01.csproj", "{EE8F9F38-347A-4B7B-B0ED-12B13FE479BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Streams01", "Streams01\Streams01.csproj", "{EE8F9F38-347A-4B7B-B0ED-12B13FE479BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wed01_Exceptions", "Wed01_Exceptions\Wed01_Exceptions.csproj", "{2CCC232B-5021-4835-8A62-0859A419CE3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{EE8F9F38-347A-4B7B-B0ED-12B13FE479BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE8F9F38-347A-4B7B-B0ED-12B13FE479BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE8F9F38-347A-4B7B-B0ED-12B13FE479BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCC232B-5021-4835-8A62-0859A419CE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCC232B-5021-4835-8A62-0859A419CE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCC232B-5021-4835-8A62-0859A419CE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCC232B-5021-4835-8A62-0859A419CE3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
