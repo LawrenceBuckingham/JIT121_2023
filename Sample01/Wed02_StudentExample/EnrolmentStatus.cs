@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Wed02_StudentExample {
-    internal enum EnrolmentStatus {
+    public enum EnrolmentStatus {
         Enrolled, Complete, Withdrawn
     }
 }

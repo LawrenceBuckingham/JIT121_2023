@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Wed02_StudentExample {
-    internal class University {
+    public class University {
         List<Student> students = new();
         List<Subject> subjects = new();
         int nextStudent = 1000000;
@@ -26,6 +26,16 @@ namespace Wed02_StudentExample {
 
         public void Enrol(Student student, Subject subject) {
             student.Enrol(subject, currentSemester);
+        }
+
+        public IEnumerable<Student> EnrolledStudents {
+            get {
+                return students.Where(s => s.CurrentSubjects.Count() > 0); 
+            }
+        }
+
+        public override string ToString() {
+            return $"{EnrolledStudents.Count()} currently enrolled students, {subjects.Count()} subjects";
         }
     }
 }

@@ -8,6 +8,9 @@
         Subjects have a subject code and a description, and a set of teaching staff.
         Teaching staff may be lecturers, or tutors in a give subject.
         Teaching staff may teach multiple subjects, and they may have different roles in each subject.
+        At the end of each semester we record a grade for each student in their currently enrolled subjects.
+        At the beginning of each new semester, the current semester changes.
+        Semesters rotate through a cycle "Semester 1", "Semester 2", "Summer".
         */
         static void Main(string[] args) {
             Console.WriteLine("Hello, Student World!");
@@ -20,6 +23,11 @@
 
             uni.Enrol(student, cab201);
             uni.Enrol(student, ifn557);
+
+            student.SetGrade(cab201, 7); // AT QUT, grades run from 1,2,...,7.
+            student.SetGrade(ifn557, 5);
+
+            ;
         }
     }
 }
