@@ -1,0 +1,27 @@
+Agenda Day 4
+------------
+1	Examine user stories - case study similar in complexity to a typical programming assignment at QUT.
+
+2	Encapsulation
+	-	Hiding the implementation detail from outside classes
+	-	Defining a PROGRAMMATIC INTERFACE and a contract to each object which avoids revealing detail of the implementation to outside classes
+	-	"decouple" the classes in our solution
+	-	We gain freedom to modify the implementation of any class without adversly impacting on external classes.
+	-	We can completely replace one implementation with another.
+	
+3	Refactoring - Apply the SOLID and GRASP principles
+	-	Define an abstract interface to the university student enrolment Object Model.
+	-	Hide the details for other modules that use it.
+	-	Define a set of C# interface types
+	-	Implement those interfaces in the existing classes
+	-	Conceal the implementations by making the exisintg classes internally visible.
+	
+4	Commence work on Windows application to pull it all together
+	-	Possible technologies:
+		-	Console application (menus, an ReadLine, WriteLine) - not realistic because console apps are barely used for "normal" computing.
+		-	Windows Forms - graphical, has designer support, but it very old technology, and totally windows specific (except for Mono Winforms)
+		
+		-	Windows Presentation Foundation (WPF) - a bit old (since 2007) but still actively supported in .NET Core; Windows-only; XAML - eXtensible Application Markup Language, dialect of XML.
+		
+		-	MAUI - Modern Application User Interface - X-platform, Android, iOS, MacOS, Windows (not linux!), very bothersome to set up a MAUI project. XAML - based technology.
+

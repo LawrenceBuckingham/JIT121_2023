@@ -25,11 +25,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections02_Dictionary", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Streams01", "Streams01\Streams01.csproj", "{EE8F9F38-347A-4B7B-B0ED-12B13FE479BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wed01_Exceptions", "Wed01_Exceptions\Wed01_Exceptions.csproj", "{2CCC232B-5021-4835-8A62-0859A419CE3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wed01_Exceptions", "Wed01_Exceptions\Wed01_Exceptions.csproj", "{2CCC232B-5021-4835-8A62-0859A419CE3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wed02_StudentExample", "Wed02_StudentExample\Wed02_StudentExample.csproj", "{03044CCD-C778-4026-8D38-2498177ABA6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wed02_StudentExample", "Wed02_StudentExample\Wed02_StudentExample.csproj", "{03044CCD-C778-4026-8D38-2498177ABA6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thu01_StudentTests", "Thu01_StudentTests\Thu01_StudentTests.csproj", "{169CD9A6-CB45-455B-ABC4-96008DDBDBD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thu01_StudentTests", "Thu01_StudentTests\Thu01_StudentTests.csproj", "{169CD9A6-CB45-455B-ABC4-96008DDBDBD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{ECD0A534-4FFD-4F52-9B2D-ED65DBF897C8}"
+	ProjectSection(SolutionItems) = preProject
+		Case_study_user_stories.txt = Case_study_user_stories.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentObjectModel", "StudentObjectModel\StudentObjectModel.csproj", "{E61B4D95-18C9-4309-99D9-AC331BED9F74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +100,10 @@ Global
 		{169CD9A6-CB45-455B-ABC4-96008DDBDBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{169CD9A6-CB45-455B-ABC4-96008DDBDBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{169CD9A6-CB45-455B-ABC4-96008DDBDBD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E61B4D95-18C9-4309-99D9-AC331BED9F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E61B4D95-18C9-4309-99D9-AC331BED9F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E61B4D95-18C9-4309-99D9-AC331BED9F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E61B4D95-18C9-4309-99D9-AC331BED9F74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
