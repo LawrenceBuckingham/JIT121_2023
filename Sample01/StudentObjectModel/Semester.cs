@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Wed02_StudentExample {
+namespace StudentObjectModel {
     public class Semester {
         string teachingPeriod;
         int year;

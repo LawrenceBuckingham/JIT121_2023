@@ -7,21 +7,26 @@ Who the user is (there is only one user in this current scenario)
 Addition *constraining factors* /success criteria
 -------------
 As a user of the student enrolment system, I want to...
-1	Offer subjects, so that students can enrol to study
+x1	Offer subjects, so that students can enrol to study
 	* Providing the subject code and subject name/description
-	* I expect subject code to be unique.
+	* I expect subject code to be unique. <--- higher level responsibility
 	* I expect basic data validation to be carried out to ensure that only valid information is stored in the system.
 		* Subject codes must contain 3 alphabetic characters followed by 3 digits between 0 and 9
 		* Subject name must not be blank, and must not contain tab, line-feed, or form-feed symbols.
+
 2	View a list of all subjects, so I can advise students about available offerings
-3	Sort the subject list by name or subject code, so I can easily find a subject
-4	Filter the list of subjects, so I can focus on one subject at a time
+
+	3	Sort the subject list by name or subject code, so I can easily find a subject
+	4	Filter the list of subjects, so I can focus on one subject at a time
+
 5	Edit an existing subject, so I can correct errors in the name or code
 	* Editing must conform to the same validation rules as creation, including uniqueness.
+
 6	Register students, so they can enrol in subjects to study
 	* A unique student id number must be allocated when the student registers
 	* In this prototype I am happy to record student name and id alone.
 	* Names must be non-blank, and must not contain tab, line-feed, or form-feed symbols.
+
 7	View a list of all students, so I can answer student enquiries about their enrolment and course progression.
 8	Edit student name, so I can correct errors or record legal change of name.
 9	Enrol a student in a subject, so they can commence study

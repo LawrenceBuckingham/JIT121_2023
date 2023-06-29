@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wed02_StudentExample {
+namespace StudentObjectModel {
     public class Student {
         // Private visibility means code in the same class where the field or property is defined can access it.
         // Public visibility means that code in any class which can access the Student class can also access the
@@ -17,42 +17,74 @@ namespace Wed02_StudentExample {
 
         // Assembly approximately corresponds to a C# project
 
-        private string name;
+        private string name = "";
         private int idNumber;
         private AcademicHistory history = new();
 
         public Student(string initialName, int initialIdNumber) {
-            name = initialName;
-            idNumber = initialIdNumber;
+            Name = initialName;
+            IdNumber = initialIdNumber;
         }
 
-        public void Enrol( Subject subject, Semester semester ) {
+        public void Enrol(Subject subject, Semester semester) {
             history.Add(this, subject, semester);
         }
 
-        // This is a property. It can be used to Get a computed result from an object, or to get
-        // the value of a private field
+        public int IdNumber {
+            get {
+                return idNumber;
+            }
+            private set {
+                if ( value <= 0 ) {
+                    throw new ArgumentException($"{value} is not a valid student id.");
+                }
+
+                idNumber = value;
+            }
+        }
+
+        public string Name {
+            get {
+                return name;
+            }
+            set {
+                if( ! IsValidName(value) ) {
+                    throw new ArgumentException($"'{value}' is not a valid student name");
+                }
+            }
+        }
+
         public double GPA {
             get {
                 return history.GPA;
             }
         }
 
-        // The property GPA above is equivalent to a method...
-        // Properties behave like methods, but they look like fields, because they do not have parentheses ()
-        // and they have simpler names.
-        // We use properties because they allow us to protect the values of fields from accidental corruption.
-        public double GetGPA() {
-            return history.GetGPA();
-        }
-
-        public IEnumerable<Subject> CurrentSubjects { get {
+        public IEnumerable<Subject> CurrentSubjects {
+            get {
                 return history.Current;
-        } }
+            }
+        }
 
         public override string ToString() {
             return $"{name},{idNumber},{GPA}";
-            // return $"{name},{idNumber},{GetGPA()}";
+        }
+
+
+        /// <summary>
+        /// Determine if a student name is valid.
+        /// </summary>
+        /// <param name="name">The subject name to test.</param>
+        /// <returns>True if and only if the subject name is valid.</returns>
+        public static bool IsValidName(string name) {
+            if (!string.IsNullOrWhiteSpace(name)
+                && name.All(c => c != '\t' && c != '\f' && c != '\r' && c != '\n')
+            ) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
 
         public void SetGrade(Subject subject, int grade) {

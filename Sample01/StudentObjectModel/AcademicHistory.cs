@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wed02_StudentExample {
+namespace StudentObjectModel {
     public class AcademicHistory {
         List<EnrolmentRecord> history = new();
 

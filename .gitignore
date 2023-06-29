@@ -32,3 +32,8 @@
 /Sample01/Thu01_StudentTests/bin/Debug/net7.0
 /Sample01/Thu01_StudentTests/obj
 /Sample01/StudentObjectModel/obj
+/Sample01/StudentObjectModel/bin/Debug/net7.0/StudentObjectModel.deps.json
+/Sample01/StudentObjectModel/bin/Debug/net7.0/StudentObjectModel.dll
+/Sample01/StudentObjectModel/bin/Debug/net7.0/StudentObjectModel.exe
+/Sample01/StudentObjectModel/bin/Debug/net7.0/StudentObjectModel.pdb
+/Sample01/StudentObjectModel/bin/Debug/net7.0/StudentObjectModel.runtimeconfig.json

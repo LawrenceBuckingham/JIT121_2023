@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Wed02_StudentExample.AcademicHistory">
-    <Position X="5.75" Y="3.5" Width="1.5" />
+  <Class Name="StudentObjectModel.AcademicHistory">
+    <Position X="4.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAMAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAgAAAAAAgA=</HashCode>
       <FileName>AcademicHistory.cs</FileName>
@@ -10,23 +10,25 @@
       <Field Name="history" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wed02_StudentExample.EnrolmentRecord">
-    <Position X="5.75" Y="5.25" Width="1.5" />
-    <AssociationLine Name="subject" Type="Wed02_StudentExample.Subject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="StudentObjectModel.EnrolmentRecord">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <AssociationLine Name="subject" Type="StudentObjectModel.Subject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7.25" Y="6.871" />
-        <Point X="9.312" Y="6.871" />
-        <Point X="9.312" Y="5.44" />
+        <Point X="9" Y="5.688" />
+        <Point X="9.375" Y="5.688" />
+        <Point X="9.375" Y="5.687" />
+        <Point X="12.25" Y="5.687" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.06" Y="0.141" Height="0.182" Width="0.645" />
+        <Position X="0.141" Y="0.06" Height="0.182" Width="0.645" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="semester" Type="Wed02_StudentExample.Semester" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="semester" Type="StudentObjectModel.Semester" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7.25" Y="7.604" />
-        <Point X="13" Y="7.604" />
-        <Point X="13" Y="2.747" />
+        <Point X="9" Y="4.375" />
+        <Point X="10.209" Y="4.375" />
+        <Point X="10.209" Y="3.375" />
+        <Point X="11.75" Y="3.375" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -36,47 +38,57 @@
     <ShowAsAssociation>
       <Field Name="student" />
       <Field Name="subject" />
-      <Field Name="status" />
       <Field Name="semester" />
+      <Field Name="status" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Wed02_StudentExample.Student">
-    <Position X="3" Y="3.5" Width="1.5" />
+  <Class Name="StudentObjectModel.Student">
+    <Position X="2" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEEAAAAAAAAAAAAEAEAAAAAIAAIEAAAAAAgAAAAAAgA=</HashCode>
+      <HashCode>AEEAAAAAAACAAAAEAEAAAAQIAAIEAAAAAAAAAABAAgA=</HashCode>
       <FileName>Student.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="history" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Wed02_StudentExample.Subject">
-    <Position X="8.5" Y="3.5" Width="1.5" />
+  <Class Name="StudentObjectModel.Subject">
+    <Position X="12.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAEAAAgAAQAIAAEAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Subject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wed02_StudentExample.University">
-    <Position X="5.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>QAEAAAAAAAAAgAAEAEAAAAAAAAABAIAAAAAAAAAiAAA=</HashCode>
-      <FileName>University.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="students" />
-      <Field Name="subjects" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Wed02_StudentExample.Semester">
-    <Position X="12.25" Y="1" Width="1.5" />
+  <Class Name="StudentObjectModel.Semester">
+    <Position X="11.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Semester.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="Wed02_StudentExample.EnrolmentStatus" Collapsed="true">
-    <Position X="5.75" Y="7.25" Width="1.5" />
+  <Class Name="StudentObjectModel.University">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAAAAAAgAAEAEAAAAAAAAABAIAAAAAAAAACAAA=</HashCode>
+      <FileName>University.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="currentSemester" />
+      <Field Name="students" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StudentObjectModel.StudentCollection">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAAAQAAAAAAIAAAAAiAAA=</HashCode>
+      <FileName>StudentCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="students" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="StudentObjectModel.EnrolmentStatus" Collapsed="true">
+    <Position X="7.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAAAAAIAEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnrolmentStatus.cs</FileName>

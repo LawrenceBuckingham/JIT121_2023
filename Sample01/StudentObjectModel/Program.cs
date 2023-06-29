@@ -1,4 +1,4 @@
-﻿namespace Wed02_StudentExample {
+﻿namespace StudentObjectModel {
     internal class Program {
         /*
         _Students_ will be enrolled in _subjects_ at _university_.
@@ -16,7 +16,8 @@
             Console.WriteLine("Hello, Student World!");
             
             University uni = new();
-            Student student = uni.RecruitStudent("Larry");
+            Student student = uni.Students.Recruit("Larry");
+
             Subject cab201 = uni.OfferSubject("CAB201", "Programming Principles");
             Subject ifb102 = uni.OfferSubject("IFB201", "Introduction to Computer Systems");
             Subject ifn557 = uni.OfferSubject("IFN557", "Rapid Web Development");

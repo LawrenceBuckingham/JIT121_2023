@@ -33,6 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thu01_StudentTests", "Thu01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{ECD0A534-4FFD-4F52-9B2D-ED65DBF897C8}"
 	ProjectSection(SolutionItems) = preProject
+		Agenda_Day_4.txt = Agenda_Day_4.txt
 		Case_study_user_stories.txt = Case_study_user_stories.txt
 	EndProjectSection
 EndProject
