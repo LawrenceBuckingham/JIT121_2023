@@ -11,6 +11,22 @@
             <RowDefinition Height="32" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Menu FontSize="16" Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <MenuItem Header="Save _As" />
+            </MenuItem>
+            <MenuItem Header="_Subject">
+                <MenuItem Header="_New subject" />
+                <MenuItem Header="_Edit subject" />
+            </MenuItem>
+            <MenuItem Header="Student">
+                <MenuItem Header="_Register student" />
+                <MenuItem Header="_Enrol in subject" />
+            </MenuItem>
+        </Menu>
         <Label Grid.Row="1" FontSize="32" Content="Hello JIT121!" HorizontalAlignment="Center" />
     </Grid>
 </Window>
