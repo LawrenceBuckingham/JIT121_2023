@@ -5,28 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentApplication"
         mc:Ignorable="d"
-        Title="JIT Student Application" Height="450" Width="800">
+        Title="JIT Student Application" Height="450" Width="800" FontSize="16">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="32" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Menu FontSize="16" Grid.Row="0">
-            <MenuItem Header="_File">
-                <MenuItem Header="_New" />
-                <MenuItem Header="_Open" />
+            <MenuItem Margin="10 3 10 3" Header="_File">
+                <MenuItem Header="_New" Click="FileNew_Click" />
+                <MenuItem Header="_Open" Click="FileOpen_Click" />
                 <MenuItem Header="_Save" />
                 <MenuItem Header="Save _As" />
+                <MenuItem Header="_Close" />
             </MenuItem>
-            <MenuItem Header="_Subject">
+            <MenuItem Margin="10 3 10 3" Header="_Subject">
                 <MenuItem Header="_New subject" />
                 <MenuItem Header="_Edit subject" />
             </MenuItem>
-            <MenuItem Header="Student">
+            <MenuItem Margin="10 3 10 3" Header="Student">
                 <MenuItem Header="_Register student" />
                 <MenuItem Header="_Enrol in subject" />
             </MenuItem>
         </Menu>
-        <Label Grid.Row="1" FontSize="32" Content="Hello JIT121!" HorizontalAlignment="Center" />
+        <TabControl Grid.Row="1">
+            <TabItem Header="Subject List">
+                <Grid>
+                    <DataGrid Name="SubjectTable" 
+                              AutoGenerateColumns="False"
+                              AlternatingRowBackground="LightBlue"
+                              ItemsSource="{Binding Subjects}"
+                              >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Subject Code" Width="*"  Binding="{Binding Code}" />
+                            <DataGridTextColumn Header="Subject Name" Width="5*" Binding="{Binding Name}"  />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Student List">
+                <Grid>
+                    <DataGrid Name="StudentTable" 
+                              AutoGenerateColumns="False"
+                              AlternatingRowBackground="LightBlue"
+                              ItemsSource="{Binding Students}"
+                              >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Student Id" Width="*"  Binding="{Binding IdNumber}" />
+                            <DataGridTextColumn Header="Student Name" Width="5*" Binding="{Binding Name}"  />
+                            <DataGridTextColumn Header="GPA" Width="42" Binding="{Binding GPA}"  />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

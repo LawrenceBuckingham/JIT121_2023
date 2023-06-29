@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace StudentObjectModel {
     public class University {
+        static readonly Semester startingSemester = Semester.GetSemester("Semester 2", 2023);
+
         StudentCollection students = new();
 
         List<Subject> subjects = new();
-        private Semester currentSemester = Semester.GetSemester( "Semester 2", 2023 );
+        private Semester currentSemester = startingSemester;
 
         public Subject OfferSubject( string code, string description ) {
             Subject newSubject = new Subject(code, description);
@@ -90,6 +92,18 @@ namespace StudentObjectModel {
                         // ignore other lines.
                         break;
                 }
+            }
+        }
+
+        public void Reset() {
+            subjects.Clear();
+            students.Reset();
+            currentSemester = startingSemester;
+        }
+
+        public IEnumerable<Subject> Subjects {
+            get {
+                return subjects;
             }
         }
     }
