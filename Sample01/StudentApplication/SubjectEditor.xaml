@@ -1,0 +1,29 @@
+﻿<Window x:Class="StudentApplication.SubjectEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentApplication"
+        mc:Ignorable="d"
+        Title="SubjectEditor" Height="150" Width="650" FontSize="16">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Subject code</Label>
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Subject name</Label>
+        <TextBox Grid.Row="0" Margin="10 7 10 7" Grid.Column="1" Text="{Binding SubjectCode, Mode=TwoWay}" />
+        <TextBox Grid.Row="1" Margin="10 7 10 7" Grid.Column="1" Text="{Binding SubjectName, Mode=TwoWay}" />
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Button Margin="10 7 10 7" Width="65" Content="Ok" Click="OkButton_Click"/>
+            <Button Margin="10 7 10 7" Width="65" Content="Cancel" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

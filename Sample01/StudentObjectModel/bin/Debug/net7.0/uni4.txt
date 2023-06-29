@@ -1,0 +1,7 @@
+Semester	Semester 2	2023
+Subject	JIT121	Software Principles
+Subject	cab201	Programming was breaking my heart, but now I am getting through it. Really, I'm alright.
+Subject	uni000	Introduction to Tertiary Studies
+Student	1000000	Larry
+EnrolmentRecord	JIT121	Enrolled	0	Semester	Semester 2	2023
+

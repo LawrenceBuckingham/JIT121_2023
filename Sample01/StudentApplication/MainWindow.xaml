@@ -15,13 +15,13 @@
             <MenuItem Margin="10 3 10 3" Header="_File">
                 <MenuItem Header="_New" Click="FileNew_Click" />
                 <MenuItem Header="_Open" Click="FileOpen_Click" />
-                <MenuItem Header="_Save" />
-                <MenuItem Header="Save _As" />
-                <MenuItem Header="_Close" />
+                <MenuItem Header="_Save" Click="FileSave_Click" />
+                <MenuItem Header="Save _As" Click="FileSaveAs_Click" />
+                <MenuItem Header="_Close" Click="FileClose_Click" />
             </MenuItem>
             <MenuItem Margin="10 3 10 3" Header="_Subject">
-                <MenuItem Header="_New subject" />
-                <MenuItem Header="_Edit subject" />
+                <MenuItem Header="_New subject" Click="SubjectNew_Click" />
+                <MenuItem Header="_Edit subject" Click="SubjectEdit_Click" />
             </MenuItem>
             <MenuItem Margin="10 3 10 3" Header="Student">
                 <MenuItem Header="_Register student" />
@@ -38,7 +38,7 @@
                               >
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Subject Code" Width="*"  Binding="{Binding Code}" />
-                            <DataGridTextColumn Header="Subject Name" Width="5*" Binding="{Binding Name}"  />
+                            <DataGridTextColumn Header="Subject Name" Width="5*" Binding="{Binding Name, Mode=TwoWay}"  />
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

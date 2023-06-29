@@ -1,0 +1,6 @@
+Semester	Semester 2	2023
+Subject	JIT121	Software Principles Is Nice.
+Subject	JJJ999	A test subject
+Student	1000000	Larry
+EnrolmentRecord	JIT121	Enrolled	0	Semester	Semester 2	2023
+
