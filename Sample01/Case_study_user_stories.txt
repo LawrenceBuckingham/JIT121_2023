@@ -28,15 +28,22 @@ x1	Offer subjects, so that students can enrol to study
 	* Names must be non-blank, and must not contain tab, line-feed, or form-feed symbols.
 
 7	View a list of all students, so I can answer student enquiries about their enrolment and course progression.
+
 8	Edit student name, so I can correct errors or record legal change of name.
+
 9	Enrol a student in a subject, so they can commence study
 	* The student will be enrolled in the current semester
+
 10	View a student enrolment history, so I can evaluate their progress
 	* History should be able to be sorted by semester, subject code, or subject name
+
 11	Record or update the grade for a student in a subject in which they are enrolled, so students can progress toward their degree
+
 12	Withdraw a student from a subject in which they are enrolled, so they can deal with changing circumstances
+
 13	Advance the current semester to the next semester, so enrolments can commence in the new semester
 	* This will mark all enrolments in the current semester as being complete.
 	
 14	Save a dataset containing all information present in the enrolment system, so I can carry out backups and resume work later.
+
 15	Open a saved data set, so I can review historical data or resume work.

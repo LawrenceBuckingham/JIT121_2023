@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace StudentObjectModel {
     public class Subject {
-        private string code;
-        private string name;
+        private string code = "";
+        private string name = "";
         // TODO add a list of currently enrolled students
 
         public Subject(string initialCode, string initialName) {
@@ -27,7 +27,7 @@ namespace StudentObjectModel {
                 return code;
             }
             set {
-                if ( ! IsValidCode(value) ) {
+                if (!IsValidCode(value)) {
                     throw new ArgumentException($"'{value}' is not a valid subject code.");
                 }
 
@@ -43,7 +43,7 @@ namespace StudentObjectModel {
                 return name;
             }
             set {
-                if ( ! IsValidName(value) ) {
+                if (!IsValidName(value)) {
                     throw new ArgumentException($"'{value}' is not a valid subject name.");
                 }
 
@@ -52,14 +52,34 @@ namespace StudentObjectModel {
         }
 
         /// <summary>
+        /// Gets a tab-separated record containing the data in this Subject.
+        /// </summary>
+        public string TabSeparated {
+            get {
+                return $"Subject\t{Code}\t{Name}";
+            }
+        }
+
+        /// <summary>
+        /// Creates a new student from a set of text fields.
+        /// </summary>
+        /// <param name="fields">
+        /// An array of strings containing the subject code in [1] and name in [2].
+        /// </param>
+        /// <returns></returns>
+        internal static Subject Parse(string[] fields) {
+            return new(fields[1], fields[2]);
+        }
+
+        /// <summary>
         /// Returns true if and only if the supplied argument is a valid subject code.
         /// </summary>
         /// <param name="code">The subject code.</param>
         /// <returns>True if code is valid. False otherwise.</returns>
-        public static bool IsValidCode( string code ) {
-            if( code.Length == 6 
-                && code.Take(3).All( c => Char.IsLetter(c) ) 
-                && code.Skip(3).All( c => Char.IsDigit(c) ) 
+        public static bool IsValidCode(string code) {
+            if (code.Length == 6
+                && code.Take(3).All(c => Char.IsLetter(c))
+                && code.Skip(3).All(c => Char.IsDigit(c))
             ) {
                 return true;
             }
@@ -73,7 +93,7 @@ namespace StudentObjectModel {
         /// </summary>
         /// <param name="name">The subject name to test.</param>
         /// <returns>True if and only if the subject name is valid.</returns>
-        public static bool IsValidName( string name ) {
+        public static bool IsValidName(string name) {
             if (!string.IsNullOrWhiteSpace(name)
                 && name.All(c => c != '\t' && c != '\f' && c != '\r' && c != '\n')
             ) {

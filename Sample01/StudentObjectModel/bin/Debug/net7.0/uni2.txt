@@ -1,0 +1,11 @@
+Semester	Summer	2023
+Subject	CAB201	Programming Principles
+Subject	IFB201	Introduction to Computer Systems
+Subject	IFN557	Rapid Web Development
+Student	1000000	Larry
+EnrolmentRecord	CAB201	Complete	7	Semester	Semester 2	2023
+EnrolmentRecord	IFN557	Complete	5	Semester	Semester 2	2023
+
+Student	1000001	Curly
+EnrolmentRecord	IFB201	Complete	6	Semester	Semester 2	2023
+

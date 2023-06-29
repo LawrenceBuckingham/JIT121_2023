@@ -35,7 +35,7 @@ namespace StudentObjectModel {
                 return idNumber;
             }
             private set {
-                if ( value <= 0 ) {
+                if (value <= 0) {
                     throw new ArgumentException($"{value} is not a valid student id.");
                 }
 
@@ -48,9 +48,11 @@ namespace StudentObjectModel {
                 return name;
             }
             set {
-                if( ! IsValidName(value) ) {
+                if (!IsValidName(value)) {
                     throw new ArgumentException($"'{value}' is not a valid student name");
                 }
+
+                name = value;
             }
         }
 
@@ -62,14 +64,36 @@ namespace StudentObjectModel {
 
         public IEnumerable<Subject> CurrentSubjects {
             get {
-                return history.Current;
+                return history.CurrentSubjects;
+            }
+        }
+
+        public string TabSeparated {
+            get {
+                StringWriter writer = new StringWriter();
+                writer.WriteLine($"Student\t{IdNumber}\t{name}");
+
+                foreach (EnrolmentRecord er in history.EnrolmentHistory) {
+                    writer.WriteLine(er.TabSeparated);
+                }
+
+                return writer.ToString();
+            }
+        }
+
+        internal static Student Parse(string[] fields) {
+            return new(fields[2], int.Parse(fields[1]));
+        }
+
+        public AcademicHistory AcademicHistory {
+            get {
+                return history;
             }
         }
 
         public override string ToString() {
             return $"{name},{idNumber},{GPA}";
         }
-
 
         /// <summary>
         /// Determine if a student name is valid.
@@ -89,6 +113,14 @@ namespace StudentObjectModel {
 
         public void SetGrade(Subject subject, int grade) {
             history.SetGrade(subject, grade);
+        }
+
+        public void Withdraw(Subject subject) {
+            history.Withdraw(subject);
+        }
+
+        internal void CompleteCurrentSemester() {
+            history.CompleteCurrentSemester();
         }
     }
 }

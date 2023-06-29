@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace StudentObjectModel {
     public class StudentCollection {
         List<Student> students = new();
-        int nextStudent = 1000000;
+        int nextStudent = InitialStudentId;
+        const int InitialStudentId = 1000000;
 
         /// <summary>
         /// Return the collection of enrolled students.
@@ -36,6 +37,18 @@ namespace StudentObjectModel {
 
         public override string ToString() {
             return $"{Enrolled.Count()} enrolled, {All.Count()} altogether";
+        }
+
+        internal Student Parse(string[] fields) {
+            Student student = Student.Parse( fields );
+            nextStudent = Math.Max(student.IdNumber + 1, nextStudent);
+            students.Add(student);
+            return student;
+        }
+
+        internal void Reset() {
+            nextStudent = InitialStudentId;
+            students.Clear();
         }
     }
 }

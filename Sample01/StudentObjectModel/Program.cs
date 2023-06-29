@@ -28,7 +28,16 @@
             student.SetGrade(cab201, 7); // AT QUT, grades run from 1,2,...,7.
             student.SetGrade(ifn557, 5);
 
-            ;
+            student = uni.Students.Recruit("Curly");
+            uni.Enrol(student, ifb102);
+            student.SetGrade(ifb102, 6);
+
+            uni.FinaliseCurrentSemester();
+            uni.SaveAs("uni.txt");
+
+            University uni2 = new University();
+            uni2.Load("uni.txt");
+            uni2.SaveAs("uni2.txt");
         }
     }
 }

@@ -14,7 +14,7 @@ Agenda Day 4
 	-	Hide the details for other modules that use it.
 	-	Define a set of C# interface types
 	-	Implement those interfaces in the existing classes
-	-	Conceal the implementations by making the exisintg classes internally visible.
+	-	Conceal the implementations by making the existing classes internally visible.
 	
 4	Commence work on Windows application to pull it all together
 	-	Possible technologies:
