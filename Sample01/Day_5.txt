@@ -1,0 +1,61 @@
+Inheritance
+	-	Define new classes that are based on existing classes
+		-	The existing (original) class is called the "base class".
+			-	Sometimes the original is also called the "superclass".
+		-	The new class which is defined by "extending" the base class is called a "derived class", or "subclass"
+	-	The new class we define - subclass - has all the the attributes and behaviours of the base class, but it also define new attributes, and new behaviours.
+		- 	Because the subclass has all the attributes and behaviours of its base class, we can treat any instance of the subclass exactly the same as if it was an instance of the base class.
+			-	Substitution: we can use an instance of a subclass _anywhere_ we could ues an instance of the base class.
+		- 	We created a class called SubjectEditor which extends Window
+			-	Any instance of SubjectEditor class is automatically also an instance of the Window class
+			-	But SubjectEditor is a special kind of Window:
+			-	It has additional properties that a "normal" Window doesn't have
+				- Result, SubjectCode, SubjectName
+			-	It has additionl methods, that a "normal" Window doesn't have
+				- SubjectEditor Constructor, OkButton_Click, CancelButton_Click
+		-	The new methods and behaviours give the subclass additional powers
+		-	The subclass is a specialised form of the base class.
+	
+	-	Some languages allow a subclass to be derived from more than one base class class
+		-	This is really problematic in programming languages.
+		-	class A { 
+				public int id; 
+				public string name; 
+				public void A_Method(){} 
+			}
+			class B { 
+				public string id; 
+				public string desciption; 
+				public void B_method(){} 
+			}
+			class C : A, B { void C_Method(){} }
+			
+			A a = new();
+			a.id = 65;
+			a.name = "apple";
+			
+			B b = new();
+			b.id = "bird";
+			b.description = "A flying thing with feathers.";
+			
+			C c = new();
+			c.id ???????????? is it an int, or is it a string, or are there actually two different things in c called "id" ?
+			
+		-	Languages that implement multiple inheritance have to handle this, and it is very tricky!
+			-	C++ supports multiple inheritance, but it is very confusing :'(
+			
+		- C# DOES NOT SUPPORT MULTIPLE INHERITANCE.
+		
+Polymorphism
+	-	When a subclass inherits a behaviour (method, property) and CHANGES it.
+	-	The inherited property or method must be either VIRTUAL or ABSTRACT.
+	-	Virtual methods are able to be changed in subclasses.
+	-	Poly == "many"
+	-	Morphos == "form"
+	-	Polymorphism == "many forms"
+	
+Interfaces
+	-	Inheritance produces more specialised classes of objects.
+	-	Interfaces are used to define more general classes of objects.
+	-	An interface defines the programmatic inerterfac (API) for a set of operations (methods or properties) which can be implemented by one or more classes.
+	-	Interface does not provide any actual working instructions to "do" the operations - they are all provided by implementing classes.
