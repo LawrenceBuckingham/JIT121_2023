@@ -39,7 +39,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{ECD0A534-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentObjectModel", "StudentObjectModel\StudentObjectModel.csproj", "{E61B4D95-18C9-4309-99D9-AC331BED9F74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentApplication", "StudentApplication\StudentApplication.csproj", "{09F279A1-99E4-46E2-84EA-093FA8520173}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentApplication", "StudentApplication\StudentApplication.csproj", "{09F279A1-99E4-46E2-84EA-093FA8520173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Friday_InheritancePolymorphismInterfaces", "Friday_InheritancePolymorphismInterfaces\Friday_InheritancePolymorphismInterfaces.csproj", "{EDA8CB7B-B1E2-4ABC-9D5D-493EC40A404E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{09F279A1-99E4-46E2-84EA-093FA8520173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09F279A1-99E4-46E2-84EA-093FA8520173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09F279A1-99E4-46E2-84EA-093FA8520173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA8CB7B-B1E2-4ABC-9D5D-493EC40A404E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA8CB7B-B1E2-4ABC-9D5D-493EC40A404E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA8CB7B-B1E2-4ABC-9D5D-493EC40A404E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA8CB7B-B1E2-4ABC-9D5D-493EC40A404E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
